@@ -17,10 +17,10 @@
         {
           "type":  "shell",
           "inline": [
-                "sudo mv /tmp/r1soft.repo  /etc/yum.repos.d/r1soft.repo"
-                "sudo yum update -y"
-                "yum install serverbackup-enterprise-agent -y"
-                "sudo systemctl start cdp-agent -y && systemctl enable cdp-agent -y"
+                "sudo mv /tmp/r1soft.repo  /etc/yum.repos.d/r1soft.repo",
+                "sudo yum update -y",
+                "yum install serverbackup-enterprise-agent -y",
+                "sudo systemctl enable sbm-agent -y",
                 "sudo systemctl stop firewalld -y "
 
 
