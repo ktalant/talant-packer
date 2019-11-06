@@ -11,12 +11,13 @@
         {
             "type": "file",
             "source": "files/r1soft.repo",
-            "destination": "/etc/yum.repos.d/r1soft.repo"
+            "destination": "/tmp/r1soft.repo"
             
-        }
+        },
         {
           "type":  "shell",
           "inline": [
+                "mv /tmp/r1soft.repo  /etc/yum.repos.d/r1soft.repo"
                 "sudo yum update -y"
                 "yum install serverbackup-enterprise-agent -y"
                 "sudo systemctl start cdp-agent -y && systemctl enable cdp-agent -y"
