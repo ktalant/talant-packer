@@ -13,7 +13,7 @@
         "most_recent": true
       },      
       "ssh_username": "{{user `ssh_username`}}",
-      "ami_name": "updated {{timestamp}}"
+      "ami_name": "gitlab {{timestamp}}"
     }],
     "provisioners": [
         {
@@ -29,6 +29,7 @@
                 "sudo yum update -y",
                 "sudo yum install serverbackup-enterprise-agent -y",
                 "sudo systemctl enable sbm-agent -y",
+
                 ]
         }
         ]
